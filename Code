@@ -1,0 +1,267 @@
+###### Python program to print 
+# colored text and background 
+import os
+import time
+import sys 
+import simpleaudio as sa
+import pandas as tl 
+import csv
+import sklearn
+df = tl.read_csv('desktop/Bike1.csv') 
+from termcolor import colored, cprint 
+
+def Bike():      #by vinay
+        
+    text = colored(':::::::::::: BIKE GARAGE ::::::::::', 'green', attrs=['reverse', 'blink']) 
+
+        
+    def Budget():   #budget function
+     
+                   
+                    cprint(" Attention You Are Entering a Case Sensitive Area !", 'red', attrs=['bold'], file=sys.stderr)
+                    print("-------------------------------------------------------------------------------------------------------")
+                    print("Enter The Value Of Your Budget : \n")
+                    
+                    print("available list :  Price=> 46 k , 50 k , 56 k , 70 k , 80 k , 80 k , 98 k ") 
+                    print(" 1.1 lakh , 1.2 lakh , 1.4 lakh , 1.6 lakh , 1.8 lakh , 1.8 lakh , 4.5 lakh , 14 lakh , 16 lakh , 25 lakh , 98 lakh ")
+                    
+                    miin = input("Enter min value : ex : 50 k , 1.2 lakh =>")
+
+                    maax = input("Enter max value : ex : 90 k , 14 lakh =>")
+
+                    
+                    data = tl.read_csv("desktop/bike1.csv", index_col ="Price")         
+                    rows = data.loc[miin:maax] 
+                    
+                    print("\n\nxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")
+                    
+                    from tqdm.auto import tqdm
+                    #import tqdm  # or whatever tqdm imports you use
+                    import colorama
+                    colorama.deinit()
+                    colorama.init(strip=False)
+                    for i in tqdm(range(50000)):
+                        print(" ", end='\r') 
+
+                    time.sleep(1)
+                    
+                    print("::::::::: THE FOLLOWING BIKES ARE GOOD FOR YOU ::::::::::::: :")
+                            # checking data type of rows 
+                            #print(type(rows)) 
+                    print(rows)     
+                    print("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx   FINISHED xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")
+                    print("\nxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx \n\n\n")
+                    time.sleep(2)
+                    
+    def Vname():  #vehicle type function
+        
+                cprint(" Attention You Are Entering a Case Sensitive Area !", 'red', attrs=['bold'], file=sys.stderr)
+                print("\n\n -------------------------------------------------------------------------------------------------")
+
+
+                print("\n Enter The Vehicle name from the list: \n")
+
+                print("Name : Honda HF , Honda , Hero Splendor Plus, Honda Activa , Honda ,TVS , Honda CB , Yamaha FZ , Bajaj , Revolt  , Yamaha YZF , Bajaj Pulsar , Royal Enfield , KTM Duke , 2006 Big Dog , Suzuki Hayabusa , 2017 Fonzarelli Fz , 2017 KTM 50 SX , Kawasaki Ninja , 2012 Choper Custom ")
+                print("\n\n -------------------------------------------------------------------------------------------------")
+
+
+                name =input("\n \n Enter vehicle name from above list :")
+
+                data = tl.read_csv("desktop/bike1.csv", index_col ="Name") 
+                rows = data.loc[name] 
+
+                # checking data type of rows 
+                print("\n\nxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")
+                from tqdm.auto import tqdm
+                #import tqdm  # or whatever tqdm imports you use
+                import colorama
+                colorama.deinit()
+                colorama.init(strip=False)
+                for i in tqdm(range(50000)):
+                        print(" ", end='\r')
+                time.sleep(1)
+                
+                print("::::::::::: THE FOLLOWING BIKES ARE GOOD FOR YOU :::::::::::: \n \n ")
+                print(rows)
+                print("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx   FINISHED xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")
+                print("\nxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx \n\n\n")
+                time.sleep(2)
+   
+    def sf():   #special feature function
+        
+        cprint(" Attention You Are Entering a Case Sensitive Area !", 'red', attrs=['bold'], file=sys.stderr)
+        print("\n\n -------------------------------------------------------------------------------------------------")
+        
+        
+        print("\n Enter The FEATURE : ex : cheap , drum brakes , ABS , 5 or 6 gear , gear box , economical , speed , high milege\n")
+
+
+        
+        print("\n\n -------------------------------------------------------------------------------------------------")
+        
+
+        name =input("\n \n Enter vehicle name from list :")
+        
+        data = tl.read_csv("desktop/bike1.csv", index_col ="Keyword") 
+        rows = data.loc[name] 
+
+        # checking data type of rows 
+        print("\n\nxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")
+        from tqdm.auto import tqdm
+        #import tqdm  # or whatever tqdm imports you use
+        import colorama
+        colorama.deinit()
+        colorama.init(strip=False)
+        for i in tqdm(range(50000)):
+                        print(" ", end='\r') 
+        time.sleep(1)
+        
+        
+        print("::::::::::::: THE FOLLOWING BIKES ARE GOOD FOR YOU :::::::::::::: \n \n")
+        print(rows)
+        print("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx   FINISHED xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")
+        print("\nxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx \n\n\n")
+        time.sleep(2)
+        
+    def Biket():    #bike type function 
+        
+        
+        cprint(" Attention You Are Entering a Case Sensitive Area !", 'red', attrs=['bold'], file=sys.stderr)
+        print("\n\n -------------------------------------------------------------------------------------------------")
+        
+        
+        print("\n Enter The Vehicle Type : ex : Cruiser , Sports ,Dual Sport , Electric scooter , Fun \n")
+        
+        print("\n\n -------------------------------------------------------------------------------------------------")
+        
+
+        name =input("\n \n Enter vehicle name from above list :")
+        
+        data = tl.read_csv("desktop/bike1.csv", index_col ="Body type") 
+        rows = data.loc[name] 
+
+        # checking data type of rows 
+        print("\n\nxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")
+        from tqdm.auto import tqdm
+        #import tqdm  # or whatever tqdm imports you use
+        import colorama
+        colorama.deinit()
+        colorama.init(strip=False)
+        for i in tqdm(range(50000)):
+                        print(" ", end='\r') 
+        time.sleep(1)
+        
+        
+        print("::::::::::::: THE FOLLOWING BIKES ARE GOOD FOR YOU \n \n ::::::::::::::")
+        print(rows)
+        print("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx   FINISHED xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")
+        print("\nxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx \n\n\n")
+        time.sleep(2)  
+
+        
+    cprint(' !!!!! RECOMMEND BIKE ON BASIS OF !!!!', 'red', 'on_white') 
+   
+    while(True):   #by vinay main of bike function
+            
+            print(bold_start,"1. Budget \n"  )
+            print("2. Vehicle Name \n" )
+            print("3. Bike Type \n" )
+            print("4. Any Special Feature \n")
+            print("5. Bikes List \n")
+            text = colored('6. EXIT (bike garage) !', 'red', attrs=['reverse', 'blink']) 
+            print(text) 
+            time.sleep(1)
+            l =int(input("Enter your choice (in bike garage)=> "));
+            
+            if(l==1):
+                    Budget()
+                    continue;
+
+
+            elif(l==2):
+                    Vname()
+                    continue;
+            elif(l==3):
+                    Biket()
+                    continue;
+
+            elif(l==4):
+                    sf()
+                    continue;
+            elif(l==5):
+                import pandas as jk 
+                df = jk.read_csv('desktop/Bike1.csv') 
+                print(jk)
+                continue;
+            elif(l==6): 
+                        break;
+            else:
+                print("WRONG CHOICE !!!! ");
+                print("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")
+                print("\nxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx \n\n\n")
+           
+                continue;
+            print("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")
+            print("\nxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx \n\n\n")
+           
+
+    
+    
+    
+# (by vinay) main  of the program 
+
+
+while(True):
+        print("---------------------------------------------------------------------------------------------------------------\n\n\n")
+        print("---------------------------------------------------------------------------------------------------------------\n\n\n")
+       
+        print("WHAT IS YOUR PLAN TO BUY : \n\n")
+        cprint(' !!!!! PRIVATE Transport !!!!', 'red', 'on_white') 
+
+        print(bold_start,"1. BIKE \n" )
+        print("2. CAR \n" , bold_end )
+
+
+        cprint(' !!!!! PUBLIC Transport !!!!', 'red', 'on_white') 
+
+        print(bold_start,"3. Loader 4 Wheeler \n" )
+        print("4. Public Transport (4 wheeler, 3 wheeler) \n");
+
+        text = colored('5. EXIT (source) !', 'red', attrs=['reverse', 'blink']) 
+        print(text) 
+        
+        c =int(input("Enter your choice (source)=> \n\n\n"));
+        if(c==1):
+                
+                cprint(' !!!!! Igniting !!!!!', 'red', 'on_white');
+                time.sleep(1);
+                filename = 'desktop/test1.wav'
+                wave_obj = sa.WaveObject.from_wave_file(filename)
+                play_obj = wave_obj.play()
+                play_obj.wait_done() 
+                print("-------------------------------------------------------------------------------------------------------");
+                cprint("WELCOME To The BIKE Section !!!! ", 'green', attrs=['bold','underline'], file=sys.stderr) 
+                Bike()
+                continue;
+
+        elif(c==2):
+            # your any function
+            continue;
+        elif(c==3):
+            # your any function
+            continue;
+
+        elif(c==4):
+                # your any function
+                continue;
+        
+        elif(c==5):
+                
+                print("\n HAVE A GOOD DAY " +bold_start, n , bold_end )
+                break;
+            
+        else:
+            print("WRONG CHOICE !!!! ");
+            continue;
+
+
